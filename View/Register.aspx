@@ -40,7 +40,7 @@
             <div class="form-group">
                 <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn-register" OnClick="btnRegister_Click" />
             </div>
-            <asp:Label ID="lblError" runat="server" CssClass="error-message" Visible="false"></asp:Label>
+            <asp:Label ID="lblError" runat="server" CssClass="error-message" Visible="true" Text=""></asp:Label>
             <div class="login-link">
                 <a href="../View/Login.aspx">Login here</a>
             </div>

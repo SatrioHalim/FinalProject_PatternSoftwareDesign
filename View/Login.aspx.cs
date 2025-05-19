@@ -22,12 +22,11 @@ namespace FinalProject_PSD_EmpatSekawan.View
 
             UserHandler userHandler = new UserHandler();
 
-
             MsUser user = userHandler.LoginUser(email, password);
             if (user != null)
             {
                 Session["User"] = user;
-                Response.Redirect("~/Home.aspx");
+                Response.Redirect("~/View/Home.aspx");
             }
             else
             {

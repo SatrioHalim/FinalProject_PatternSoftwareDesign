@@ -20,11 +20,11 @@
             <div class="form-group">
                 <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn-login" OnClick="btnLogin_Click" />
             </div>
-            <asp:Label ID="lblError" runat="server" CssClass="error-message" Visible="false"></asp:Label>
+            <asp:Label ID="lblError" runat="server" CssClass="error-message" Visible="true" Text=""></asp:Label>
         </div>
 
         <div class="register-link">
-            <a href="../Register.aspx">Register here</a>
+            <a href="../View/Register.aspx">Register here</a>
         </div>
     </form>
 </body>

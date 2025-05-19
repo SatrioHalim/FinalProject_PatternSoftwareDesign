@@ -54,7 +54,7 @@ namespace FinalProject_PSD_EmpatSekawan.View
             bool isRegistered = userController.RegisterUser(username, email, password, gender, dob);
             if (isRegistered)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/View/Login.aspx");
             }
             else
             {

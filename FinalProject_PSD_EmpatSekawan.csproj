@@ -89,6 +89,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="View\Home.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\Ph1.aspx" />
     <Content Include="View\Register.aspx" />
@@ -136,6 +137,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Factory\DatabaseSingleton.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="View\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
