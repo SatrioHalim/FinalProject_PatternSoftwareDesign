@@ -99,9 +99,31 @@
             </div>
         </nav>
 
-        <!-- Main content area -->
         <div class="container mt-4">
             <asp:Label ID="LbUsername" runat="server" Text=""></asp:Label>
+
+                <div class="row">
+                <asp:Repeater ID="rptJewels" runat="server">
+                    <ItemTemplate>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jewel ID: <%# Eval("JewelId") %></h5>
+                                    <p class="card-text">
+                                        Name: <%# Eval("JewelName") %><br />
+                                        Price:<%# Eval("JewelPrice", "{0:N0}") %>
+                                    </p>
+                                    <asp:LinkButton ID="lnkViewDetails" runat="server" 
+                                        CssClass="btn btn-primary" 
+                                        PostBackUrl='<%# $"JewelDetail.aspx?id={Eval("JewelId")}" %>'>
+                                        View Details
+                                    </asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
         </div>
     </form>
 

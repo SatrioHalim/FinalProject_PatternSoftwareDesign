@@ -1,16 +1,21 @@
 ﻿using FinalProject_PSD_EmpatSekawan.Model;
+using FinalProject_PSD_EmpatSekawan.Controller;
 using System;
+using System.Collections.Generic;
 using System.Web.UI;
 
 namespace FinalProject_PSD_EmpatSekawan.View
 {
     public partial class Home : System.Web.UI.Page
     {
+        private JewelController jewelController = new JewelController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 UpdateNavigationVisibility();
+                LoadJewels();
             }
         }
 
@@ -42,6 +47,13 @@ namespace FinalProject_PSD_EmpatSekawan.View
                     pnlCustomer.Visible = true;
                 }
             }
+        }
+
+        private void LoadJewels()
+        {
+            var jewels = jewelController.GetAllJewels();
+            rptJewels.DataSource = jewels;
+            rptJewels.DataBind();
         }
 
         protected void lnkLogout_Click(object sender, EventArgs e)

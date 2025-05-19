@@ -51,7 +51,7 @@ namespace FinalProject_PSD_EmpatSekawan.View
             }
 
             UserController userController = new UserController();
-            bool isRegistered = userController.RegisterUser(username, email, password, gender, dob);
+            bool isRegistered = userController.RegisterUser(username, email, password, gender, dob, "Customer");
             if (isRegistered)
             {
                 Response.Redirect("~/View/Login.aspx");

@@ -8,7 +8,7 @@ namespace FinalProject_PSD_EmpatSekawan.Controller
     {
         private UserHandler userHandler = new UserHandler();
 
-        public bool RegisterUser(string username, string email, string password, string gender, DateTime dob)
+        public bool RegisterUser(string username, string email, string password, string gender, DateTime dob, String role)
         {
             return userHandler.RegisterUser(new MsUser()
             {
@@ -16,7 +16,8 @@ namespace FinalProject_PSD_EmpatSekawan.Controller
                 UserEmail = email,
                 UserPassword = password,
                 UserGender = gender,
-                UserDOB = dob
+                UserDOB = dob,
+                UserRole = role
             });
         }
     }
