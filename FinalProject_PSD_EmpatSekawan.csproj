@@ -90,9 +90,28 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="View\Tes.aspx" />
+    <Content Include="View\Register\Register.aspx" />
+    <Content Include="View\Login\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\DatabaseSingleton.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="View\Register\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Register\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Tes.cs" />
     <Compile Include="Factory\Tes.cs" />
     <Compile Include="Handler\Tes.cs" />
